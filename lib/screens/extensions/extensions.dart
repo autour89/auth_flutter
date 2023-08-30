@@ -40,7 +40,7 @@ extension ValidationExtensions on String? {
   }
 
   String? validateRepeatEmail(String email) {
-    if (this != email) {
+    if (this != email || this!.isEmpty) {
       return '';
     }
     return null;
